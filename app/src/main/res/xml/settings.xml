@@ -1,0 +1,70 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="Common">
+        <SwitchPreferenceCompat
+            app:key="wordwrap"
+            app:title="Wordwrap"
+            app:icon="@drawable/wrap"
+            app:summary="Use word wrap of the editor"
+            app:defaultValue="false"
+            app:singleLineTitle="true"/>
+            
+        <SwitchPreferenceCompat
+            app:key="showline"
+            app:title="Show line number"
+            app:icon="@drawable/counter"
+            app:summary="Enable/disable line numbers"
+            app:defaultValue="true"
+            app:singleLineTitle="true"/>
+            
+        <SwitchPreferenceCompat
+            app:key="pinline"
+            app:title="Pin line number"
+            app:icon="@drawable/format_list_numbered"
+            app:summary="Enable/disable to pin line numbers"
+            app:defaultValue="false"
+            app:singleLineTitle="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Advance"
+        app:initialExpandedChildrenCount="2">
+        <SwitchPreferenceCompat
+            app:key="magnifier"
+            app:title="Magnifier"
+            app:icon="@drawable/magnify_plus_outline"
+            app:summary="Magnify text at cursor position while slecting text in editor"
+            app:defaultValue="true"
+            app:singleLineTitle="true"/>
+        
+        <SwitchPreferenceCompat
+            app:key="font_ligature"
+            app:enabled="false"
+            app:title="Font ligature"
+            app:icon="@drawable/not_equal_variant"
+            app:summary="Enable/disable font ligatures"
+            app:defaultValue="false"
+            app:singleLineTitle="true"/>
+            
+        <SwitchPreferenceCompat
+            app:key="useicu"
+            app:title="Use ICU library"
+            app:icon="@drawable/select_all"
+            app:summary="Use ICU library to use retrieve word edges for double-tap and long-press word selection."
+            app:defaultValue="false"
+            app:singleLineTitle="true"/>
+            
+        <MultiSelectListPreference
+            app:key="nonprintflag"
+            app:enabled="false"
+            app:singleLineTitle="true"
+            app:title="Non printable flags"
+            app:summary="Choose what non-printable characters should be drawn by the editor"
+            app:icon="@drawable/text"
+            app:entries="@array/pref_non_print_title"
+            app:entryValues="@array/pref_non_print_values"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

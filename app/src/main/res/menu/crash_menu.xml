@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+	
+	<!-- <item
+        android:id="@+id/share"
+        android:name="Share"
+        android:icon="@drawable/share_variant"
+        android:title="@string/share"
+		app:contentDescription="@string/share"
+        app:showAsAction="always"/> -->
+    <item
+        android:id="@+id/clear"
+        android:name="Clear Crash Logs"
+        android:icon="@drawable/file_remove"
+        android:title="@string/clear_crash"
+		app:contentDescription="@string/clear_crash"
+		app:showAsAction="never"/>
+    <item
+        android:id="@+id/exit"
+        android:name="Exit"
+        android:icon="@drawable/exit_run"
+        android:title="@string/exit"
+		app:contentDescription="@string/exit"
+        app:showAsAction="never"/>
+
+</menu>
+

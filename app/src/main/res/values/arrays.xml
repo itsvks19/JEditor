@@ -1,0 +1,33 @@
+<resources>
+	<string-array name="pref_tab_size_title">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>Default</item>
+    </string-array>
+    
+    <string-array name="pref_tab_size_values">
+        <item>two</item>
+        <item>four</item>
+        <item>six</item>
+        <item>eight</item>
+        <item>def</item>
+    </string-array>
+    
+    <string-array name="pref_non_print_title">
+        <item>Leading whitespace</item>
+        <item>Trailing whitespace</item>
+        <item>Inner whitespace</item>
+        <item>Whitespace in empty lines</item>
+        <item>Line breaks</item>
+    </string-array>
+    
+    <string-array name="pref_non_print_values">
+        <item>pref_leading_ws</item>
+        <item>pref_trailing_ws</item>
+        <item>pref_inner_ws</item>
+        <item>pref_ws_in_empyLine</item>
+        <item>pref_line_break</item>
+    </string-array>
+</resources>

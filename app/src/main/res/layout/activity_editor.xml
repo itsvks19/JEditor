@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editor_root"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:id="@+id/search_panel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <HorizontalScrollView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+				android:gravity="center"
+                android:weightSum="4">
+                
+                <Button
+					android:id="@+id/last"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+					android:layout_margin="3dp"
+                    android:onClick="gotoLast"
+                    android:text="@string/last"/>
+                
+                <Button
+					android:id="@+id/next"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+					android:layout_margin="3dp"
+                    android:onClick="gotoNext"
+                    android:text="@string/next"/>
+                
+                <Button
+					android:id="@+id/replace"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+					android:layout_margin="3dp"
+                    android:onClick="replace"
+                    android:text="@string/replace"/>
+                
+                <Button
+					android:id="@+id/replaceAll"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+					android:layout_margin="3dp"
+                    android:onClick="replaceAll"
+                    android:text="@string/replaceAll"/>
+                
+            
+            </LinearLayout>
+            
+        
+        </HorizontalScrollView>
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="@string/text_to_search"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+			app:endIconMode="clear_text">
+            
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_editor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            
+        
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="@string/replacement"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+			app:endIconMode="clear_text">
+            
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/replace_editor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            
+        
+        </com.google.android.material.textfield.TextInputLayout>
+        
+    
+    </LinearLayout>
+    
+    <io.github.rosemoe.sora.widget.CodeEditor
+        android:id="@+id/editor"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"/>
+    
+    <LinearLayout
+        android:id="@+id/symbol"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        
+        <HorizontalScrollView
+            android:layout_height="40dp"
+            android:layout_width="match_parent">
+            
+            <io.github.rosemoe.sora.widget.SymbolInputView
+                android:fontFamily="@font/jetbrainsmono_regular"
+                android:id="@+id/symbol_input"
+                android:layout_height="40dp"
+                android:layout_width="wrap_content"/>
+            
+        
+        </HorizontalScrollView>
+        
+    
+    </LinearLayout>
+    
+
+</LinearLayout>

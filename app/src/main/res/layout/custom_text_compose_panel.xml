@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/magnifier_background"
+    android:gravity="center_vertical"
+    android:id="@+id/panel_root"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal">
+    
+    <HorizontalScrollView
+        android:id="@+id/panel_hv"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content">
+        
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+            
+            <ImageButton
+                android:background="#00000000"
+                android:id="@+id/panel_btn_select_all"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:src="@drawable/select_all"/>
+            
+            <ImageButton
+                android:background="#00000000"
+                android:id="@+id/panel_btn_copy"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:src="@drawable/content_copy"/>
+            
+            <ImageButton
+                android:background="#00000000"
+                android:id="@+id/panel_btn_paste"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:src="@drawable/content_paste"/>
+            
+            <ImageButton
+                android:background="#00000000"
+                android:id="@+id/panel_btn_cut"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:src="@drawable/content_cut"/>
+            
+        
+        </LinearLayout>
+        
+    
+    </HorizontalScrollView>
+    
+
+</LinearLayout>

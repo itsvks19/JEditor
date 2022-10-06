@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+    buildToolsVersion "33.0.0"
+
+    defaultConfig {
+        applicationId "com.itsvks.jeditor"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName System.currentTimeMillis() + "-alpha"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+		sourceCompatibility JavaVersion.VERSION_11
+		targetCompatibility JavaVersion.VERSION_11
+	}
+	
+	buildFeatures {
+        viewBinding true
+    }
+    
+    packagingOptions {
+        pickFirst "license/README.dom.txt"
+        exclude "license/LICENSE.dom-documentation.txt"
+        exclude "license/NOTICE"
+        exclude "license/LICENSE.dom-software.txt"
+        exclude "license/LICENSE"
+    }
+}
+
+dependencies {
+	def core_version = "1.8.0"
+
+    // Java language implementation
+    implementation "androidx.core:core:$core_version"
+    // Kotlin
+    implementation "androidx.core:core-ktx:$core_version"
+
+    // To use RoleManagerCompat
+    implementation "androidx.core:core-role:1.0.0"
+
+    // To use the Animator APIs
+    implementation "androidx.core:core-animation:1.0.0-beta01"
+    // To test the Animator APIs
+    androidTestImplementation "androidx.core:core-animation-testing:1.0.0-beta01"
+
+    // Optional - To enable APIs that query the performance characteristics of GMS devices.
+    implementation "androidx.core:core-performance:1.0.0-alpha02"
+
+    // Optional - to use ShortcutManagerCompat to donate shortcuts to be used by Google
+    implementation "androidx.core:core-google-shortcuts:1.0.1"
+
+    // Optional - to support backwards compatibility of RemoteViews
+    implementation "androidx.core:core-remoteviews:1.0.0-beta02"
+
+    // Optional - APIs for SplashScreen, including compatiblity helpers on devices prior Android 12
+    implementation "androidx.core:core-splashscreen:1.0.0"
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'io.github.Rosemoe.sora-editor:editor:0.17.1'
+    implementation 'io.github.Rosemoe.sora-editor:editor-lsp:0.17.1'
+    implementation 'io.github.Rosemoe.sora-editor:language-java:0.17.1'
+    implementation 'io.github.Rosemoe.sora-editor:language-textmate:0.17.1'
+    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'org.eclipse.lsp4j:org.eclipse.lsp4j:0.15.0'
+	implementation 'com.google.googlejavaformat:google-java-format:1.15.0'
+	implementation 'org.checkerframework:checker:3.26.0'
+	implementation 'io.github.amrdeveloper:treeview:1.1.0'
+}
